@@ -7,15 +7,13 @@ body:
       value: "Thank you for taking the time to fill out this bug report!\n"
     type: markdown
   - attributes:
-      label: "Preflight checklist"
+      label: Checklist
       options:
         - label:
-            "I could not find a solution in the existing issues, docs, nor
-            discussions."
+            "I could not find a solution in the existing issues or docs."
           required: true
         - label:
-            "I agree to follow this project's Code of
-            Conduct"
+            "I agree to follow this project's [Code of Conduct](https://github.com/teamhanko/hanko/blob/main/CODE_OF_CONDUCT.md)."
           required: true
     id: checklist
     type: checkboxes
@@ -28,6 +26,7 @@ body:
     validations:
       required: true
   - attributes:
+      label: Reproducing the bug
       description: |
         Clear, formatted, and easy to follow steps to reproduce the behavior:
       placeholder: |
@@ -36,7 +35,6 @@ body:
         1. Run `docker run ....`
         2. Make API Request to with `curl ...`
         3. Request fails with response: `{"some": "error"}`
-      label: "Reproducing the bug"
     id: reproduce-bug
     type: textarea
     validations:
@@ -47,7 +45,7 @@ body:
         "Please copy and paste any relevant log output. This will be
         automatically formatted into code, so no need for backticks. Please
         redact any sensitive information!"
-      render: shell
+      render: Shell
     id: logs
     type: textarea
   - attributes:
@@ -59,8 +57,8 @@ body:
       render: yml
       placeholder: |
         server:
-          admin:
-            port: 1234
+          public:
+            address: :8080
     id: config
     type: textarea
   - attributes:
