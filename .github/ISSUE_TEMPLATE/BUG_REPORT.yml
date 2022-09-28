@@ -42,22 +42,20 @@ body:
     validations:
       required: true
   - attributes:
+      label: Logs
       description:
         "Please copy and paste any relevant log output. This will be
         automatically formatted into code, so no need for backticks. Please
-        redact any sensitive information"
-      label: "Relevant log output"
+        redact any sensitive information!"
       render: shell
-      placeholder: |
-        log=error ....
     id: logs
     type: textarea
   - attributes:
+      label: Configuration
       description:
         "Please copy and paste any relevant configuration. This will be
         automatically formatted into code, so no need for backticks. Please
         redact any sensitive information!"
-      label: "Relevant configuration"
       render: yml
       placeholder: |
         server:
@@ -66,14 +64,15 @@ body:
     id: config
     type: textarea
   - attributes:
+      label: Hanko Version
       description: "What version of our software are you running?"
-      label: Version
     id: version
     type: input
     validations:
       required: true
   - attributes:
-      label: "On which operating system are you observing this issue?"
+      label: OS
+      description: "On which operating system are you observing this issue?"
       options:
         - macOS
         - Linux
@@ -82,21 +81,22 @@ body:
     id: operating-system
     type: dropdown
   - attributes:
-      description: "Which operating system are you using?"
       label: OS Version
+      description: "Which operating system version are you using?"
     id: operating-system-version
     type: textarea
   - attributes:
-      label: "In which environment are you deploying?"
+      label: Environment
+      description: "In which environment are you deploying/running the application(s)?"
       options:
         - Docker
-        - "Docker Compose"
-        - Binary
-        - Other
+        - Docker Compose
+        - Binary/Build & Run from Source
+        - Other (e.g. Kubernetes)
     id: deployment
     type: dropdown
   - attributes:
-      description: "Add any other context about the problem here."
+      description: "Add any other context (Links, References, Screenshots, Files) pertaining to the problem here."
       label: Additional Context
     id: additional
     type: textarea
