@@ -17,10 +17,6 @@ body:
             "I agree to follow this project's Code of
             Conduct"
           required: true
-        - label:
-            "I have read and am following this repository's Contribution
-            Guidelines."
-          required: true
     id: checklist
     type: checkboxes
   - attributes:
@@ -79,22 +75,17 @@ body:
   - attributes:
       label: "On which operating system are you observing this issue?"
       options:
-        - Hanko Cloud
         - macOS
         - Linux
         - Windows
-        - FreeBSD
         - Other
     id: operating-system
     type: dropdown
   - attributes:
       label: "In which environment are you deploying?"
       options:
-        - Hanko Cloud
         - Docker
         - "Docker Compose"
-        - "Kubernetes with Helm"
-        - Kubernetes
         - Binary
         - Other
     id: deployment
