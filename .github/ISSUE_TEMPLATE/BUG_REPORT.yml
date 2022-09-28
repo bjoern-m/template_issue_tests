@@ -82,6 +82,11 @@ body:
     id: operating-system
     type: dropdown
   - attributes:
+      description: "Which operating system are you using?"
+      label: OS Version
+      id: operating-system-version
+      type: textarea
+  - attributes:
       label: "In which environment are you deploying?"
       options:
         - Docker
